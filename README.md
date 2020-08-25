@@ -18,7 +18,7 @@ The results are given with my 8Go GPU. You can run these examples, with less Go,
 
 * For a single model with 8Go GPU: ```python main.py```.
 
-  test accuracy : 98.3%
+  test accuracy : 98.2%
 
 * With a 2Go GPU : python main.py --batch_split 4
 
