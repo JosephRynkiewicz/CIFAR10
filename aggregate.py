@@ -3,12 +3,9 @@ from __future__ import print_function
 import torch
 import torch.nn as nn
 import torch.optim as optim
-#from torch.optim import lr_scheduler
 import torch.nn.functional as F
-#import torch.backends.cudnn as cudnn
 import torchvision
 import torchvision.transforms as transforms
-#from torch.utils.data.sampler import SubsetRandomSampler
 import os
 import argparse
 import numpy as np
@@ -42,10 +39,8 @@ nclasses=10
 nsplit=args.ns
 
 testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=False, num_workers=1)
-testloader1 = torch.utils.data.DataLoader(testset, batch_size=1, shuffle=False, num_workers=1)
 
-#namesave='./checkpoint/ckpt'
-namesave='./checkpoint/ckpt20_'
+namesave='./checkpoint/ckpt'
 def extractoutputs(loader,namesave='./checkpoint/ckpt',batch_size=1,nsplit=10,nclasses=10,nbobs=10000):
     assert os.path.isdir('checkpoint'), 'Error: no checkpoint directory found!'
     outputsnet = torch.zeros(nsplit,nbobs,nclasses)
