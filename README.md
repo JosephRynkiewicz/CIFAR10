@@ -1,4 +1,4 @@
-# CIFAR10 with Pytorch and small GPU
+# More than 98% accuracy on CIFAR10 with Pytorch and small GPU
 
 I am trying to get the best results with a small GPU on the CIFAR10 dataset.
 
